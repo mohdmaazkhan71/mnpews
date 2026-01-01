@@ -1,0 +1,175 @@
+}:root {
+    --primary: #101827; /* Dark Navy */
+    --accent: #d97706;  /* Marigold */
+    --bg-light: #fffdfa; /* Warm Cream */
+    --font-serif: 'Georgia', serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: var(--font-serif); background: var(--bg-light); color: var(--primary); line-height: 1.8; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 25px; }
+
+/* Navigation */
+.navbar { height: 90px; background: white; display: flex; align-items: center; position: sticky; top: 0; z-index: 1000; border-bottom: 4px solid var(--accent); }
+.navbar .container { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+.logo { font-size: 1.5rem; font-weight: 900; letter-spacing: 2px; }
+.nav-links { display: flex; list-style: none; }
+.nav-links li { margin-left: 30px; }
+.nav-links a { text-decoration: none; color: var(--primary); font-weight: bold; text-transform: uppercase; font-size: 0.85rem; }
+
+/* Hero */
+.hero {
+    height: 90vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('c.jpg');
+    background-size: cover; background-position: center;
+    display: flex; align-items: center; justify-content: center; text-align: center; color: white;
+}
+.hero h1 { font-size: 4rem; line-height: 1.1; margin-bottom: 20px; }
+.highlight { color: var(--accent); }
+.hero-btns { margin-top: 30px; }
+
+/* Editorial "Who We Are" */
+.section { padding: 100px 0; }
+.editorial-layout { display: flex; position: relative; }
+.vertical-year { writing-mode: vertical-rl; transform: rotate(180deg); color: #e2e8f0; font-size: 3rem; font-weight: 900; position: absolute; left: -60px; }
+.creative-title { font-size: 3.5rem; margin-bottom: 40px; border-left: 10px solid var(--accent); padding-left: 30px; }
+.creative-title span { display: block; color: var(--accent); font-style: italic; }
+.premium-lead { font-size: 1.25rem; max-width: 800px; }
+.amber-text { color: var(--accent); font-weight: bold; }
+.geometric-decoration { width: 120px; height: 12px; background: var(--accent); margin-top: 50px; }
+
+/* Impact Grid (Neo-Brutalist Cards) */
+.bg-light { background: #f8fafc; }
+.impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+.impact-card { background: white; padding: 40px; border-radius: 4px; box-shadow: 12px 12px 0px #e2e8f0; transition: 0.3s; border: 1px solid #f1f5f9; }
+.impact-card:hover { transform: translate(-8px, -8px); box-shadow: 15px 15px 0px var(--accent); border-color: var(--accent); }
+.featured { background: #fffcf0; border: 2px solid var(--accent); }
+.icon-circle { width: 70px; height: 70px; background: rgba(217, 119, 6, 0.1); color: var(--accent); display: flex; align-items: center; justify-content: center; border-radius: 50%; margin-bottom: 25px; font-size: 1.8rem; }
+
+/* Contact Section */
+
+
+
+.contact-box.align-center {
+    text-align: center; /* Centers the Heading (H3) */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-box.align-center .accent-line {
+    margin: 15px auto; /* Centering the orange line */
+    width: 60px;
+}
+
+.contact-list {
+    list-style: none;
+    margin-top: 30px;
+    padding: 0;
+}
+
+.contact-list li {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers the Icon + Text group */
+    gap: 15px;
+}
+
+.contact-list i {
+    color: var(--accent);
+    font-size: 1.3rem;
+    min-width: 25px; /* Ensures icons align neatly even when centered */
+}
+
+
+
+
+
+.contact-box { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
+.contact-list { list-style: none; margin-top: 30px; }
+.contact-list li { margin-bottom: 20px; font-size: 1.1rem; }
+.contact-list i { color: var(--accent); margin-right: 15px; }
+.contact-form input, .contact-form textarea { width: 100%; padding: 18px; margin-bottom: 15px; border: 2px solid #e2e8f0; font-family: inherit; }
+.btn { padding: 16px 40px; font-weight: bold; cursor: pointer; border: none; transition: 0.3s; text-decoration: none; display: inline-block; }
+.btn-primary { background: var(--accent); color: white; }
+.btn-outline { border: 2px solid white; color: white; margin-left: 15px; }
+.btn-primary:hover { opacity: 0.9; }
+
+footer { background: var(--primary); color: #94a3b8; text-align: center; padding: 50px; }:root {
+    --primary: #101827;
+    --accent: #d97706;
+    --bg-light: #ffdfa;
+    --font-serif: 'Georgia', serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+
+body { font-family: var(--font-serif); background: var(--bg-light); color: var(--primary); line-height: 1.6; }
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+/* Navigation */
+.navbar { height: 80px; background: white; position: sticky; top: 0; z-index: 1000; border-bottom: 4px solid var(--accent); display: flex; align-items: center; }
+.navbar .container { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+.nav-links { display: flex; list-style: none; }
+.nav-links li { margin-left: 20px; }
+.nav-links a { text-decoration: none; color: var(--primary); font-weight: bold; font-size: 0.8rem; text-transform: uppercase; }
+
+/* Hero */
+.hero {
+    height: 80vh; min-height: 500px;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('c.jpg');
+    background-size: cover; background-position: center;
+    display: flex; align-items: center; justify-content: center; text-align: center; color: white;
+}
+.hero h1 { font-size: 3rem; margin-bottom: 20px; }
+.highlight { color: var(--accent); }
+
+/* Editorial & Sections */
+.section { padding: 80px 0; }
+.section-header { text-align: center; margin-bottom: 50px; }
+.accent-line { width: 60px; height: 4px; background: var(--accent); margin: 10px auto; }
+.editorial-layout { display: flex; gap: 40px; }
+.vertical-year { writing-mode: vertical-rl; transform: rotate(180deg); color: #e2e8f0; font-size: 3rem; font-weight: 900; }
+.creative-title { font-size: 2.5rem; border-left: 10px solid var(--accent); padding-left: 20px; }
+
+/* Skills & Brochure Grid */
+.brochure-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px; }
+.brochure-item { background: white; padding: 10px; border: 1px solid #ddd; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+.brochure-item img { width: 100%; height: auto; border-radius: 4px; }
+.caption { text-align: center; padding: 10px; font-weight: bold; color: var(--accent); }
+
+/* Impact Cards & Diploma Tags */
+.impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+.impact-card { background: white; padding: 30px; border-radius: 4px; box-shadow: 8px 8px 0px #e2e8f0; text-align: center; }
+.diploma-summary { background: white; padding: 40px; border-radius: 4px; box-shadow: 10px 10px 0px #e2e8f0; }
+.diploma-tags { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 20px; }
+.diploma-tags li { background: #f1f5f9; padding: 10px 15px; border-radius: 50px; font-size: 0.85rem; font-weight: bold; }
+
+/* Contact & Buttons */
+.contact-box { text-align: center; }
+.contact-list { list-style: none; margin-top: 20px; }
+.contact-list li { margin-bottom: 15px; font-size: 1.1rem; }
+.btn { padding: 12px 30px; text-decoration: none; font-weight: bold; display: inline-block; transition: 0.3s; }
+.btn-primary { background: var(--accent); color: white; }
+.btn-outline { border: 2px solid white; color: white; margin-left: 10px; }
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    .nav-links { display: none; } /* Hide for mobile simplified view */
+    .hero h1 { font-size: 2rem; }
+    .editorial-layout { flex-direction: column; }
+    .editorial-sidebar { display: none; }
+    .creative-title { font-size: 1.8rem; }
+    .btn-outline { margin-left: 0; margin-top: 10px; width: 100%; }
+    .btn-primary { width: 100%; }
+}
+
+
+@media (max-width: 768px) {
+    .contact-list li {
+        font-size: 1rem;
+        flex-direction: row; /* Keeps icon next to text even on small screens */
+    }
+}
