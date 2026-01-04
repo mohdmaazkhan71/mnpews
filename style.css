@@ -1,4 +1,4 @@
-}:root {
+:root {
     --primary: #101827; /* Dark Navy */
     --accent: #d97706;  /* Marigold */
     --bg-light: #fffdfa; /* Warm Cream */
@@ -173,3 +173,519 @@ body { font-family: var(--font-serif); background: var(--bg-light); color: var(-
         flex-direction: row; /* Keeps icon next to text even on small screens */
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- KNOW MORE ABOUT THE COURSE SECTION --- */
+
+/* Main container for the boxes */
+.course-box-container {
+   /* Centers the container */
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 40px;
+    width: 100%;
+}
+
+/* The individual box shape */
+.course-box {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Soft professional shadow */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Subtle hover effect for interactivity */
+.course-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    border-color: var(--accent);
+}
+
+/* Header of the box (The Course Title) */
+.box-header {
+    background: #1e293b; /* Dark Navy for professional look */
+    color: #ffffff;
+    padding: 18px 25px;
+    border-bottom: 4px solid var(--accent); /* Accent line under title */
+}
+
+.box-header h4 {
+    margin: 0;
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Body of the box (The Description) */
+.box-body {
+    padding: 25px;
+    background: #fffdfa; /* Warm white/cream background */
+}
+
+.box-body p {
+    color: #334155;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+    .box-header {
+        text-align: center;
+        padding: 20px 15px;
+    }
+    
+    .box-header h4 {
+        font-size: 1rem;
+    }
+
+    .box-body {
+        padding: 20px;
+    }
+}
+
+
+
+
+
+/* Pathways */
+.professional-pathway-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+/* Individual Row Shape */
+.pathway-row {
+    display: flex;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    width: 100%; /* Ensures it fills the container on PC */
+}
+
+/* Side Label for Course Name */
+.course-label {
+    background: #1e293b;
+    color: #ffffff;
+    flex: 0 0 25%; /* Use flex-basis instead of width for better PC stability */
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.95rem;
+    border-right: 4px solid #d97706; 
+}
+
+/* Content Area */
+.pathway-details {
+    flex: 0 0 75%; /* Use flex-basis to perfectly fill the rest of the row */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #ffffff;
+}
+
+.path-item {
+    padding: 20px;
+}
+
+/* Higher Studies Box */
+.path-item.studies {
+    background: #fffdfa;
+    border-right: 1px solid #f1f5f9;
+}
+
+/* Competitive Exams Box */
+.path-item.exams {
+    background: #f8fafc;
+}
+
+.path-item h6 {
+    color: #1e293b;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.path-item h6 i {
+    color: #d97706;
+}
+
+.path-item p {
+    font-size: 0.95rem;
+    color: #475569;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 992px) {
+    .pathway-row {
+        flex-direction: column;
+    }
+    .course-label, 
+    .pathway-details {
+        flex: 0 0 100%;
+        width: 100%;
+    }
+    .course-label {
+        border-right: none;
+        border-bottom: 4px solid #d97706;
+    }
+    .pathway-details {
+        grid-template-columns: 1fr;
+    }
+    .path-item.studies {
+        border-right: none;
+        border-bottom: 1px solid #f1f5f9;
+    }
+}
+
+
+
+
+
+/* Career Grid Layout */
+.career-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.career-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.card-top {
+    background: #1e293b;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 4px solid var(--accent);
+}
+
+.card-top h4 { margin: 0; font-size: 1.1rem; letter-spacing: 0.5px; }
+
+.card-main { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; }
+
+.scope-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #cbd5e1;
+}
+
+.scope-box h6 {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.scope-box p { font-size: 0.85rem; line-height: 1.4; color: #475569; }
+
+.roles-section { margin-bottom: 25px; }
+
+.role-group { margin-bottom: 15px; }
+
+.role-group strong {
+    display: block;
+    font-size: 0.8rem;
+    color: #1e293b;
+    margin-bottom: 4px;
+}
+
+.role-group p { font-size: 0.9rem; color: #64748b; margin: 0; }
+
+
+
+
+
+/* --- CONTACT  --- */
+
+.contact-box-centered {
+    max-width: 700px;
+    margin: 0 auto; /* Centers the box horizontally */
+    text-align: center; /* Centers the text inside */
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Ensures the list items stay in the center */
+    gap: 20px;
+}
+
+.contact-list li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.1rem;
+    color: var(--primary);
+}
+
+.contact-list i {
+    color: var(--accent);
+    font-size: 1.4rem;
+    width: 30px; /* Keeps icons aligned even if they have different widths */
+    text-align: center;
+}
+
+/* --- MOBILE TWEAKS --- */
+@media (max-width: 768px) {
+    .contact-box-centered {
+        padding: 30px 20px;
+        margin: 0 10px;
+    }
+    
+    .contact-list li {
+        font-size: 1rem;
+        flex-direction: column; /* Stacks icon on top of text for narrow screens */
+        gap: 8px;
+    }
+}
+
+
+
+
+
+
+/* --- AESTHETIC CONTACT CARD STYLE --- */
+
+.contact-aesthetic-card {
+    max-width: 1000px; /* Centers and limits width on PC */
+    margin: 40px auto; /* Perfect centering */
+    background: #ffffff;
+    padding: 60px 40px;
+    border-radius: 15px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Soft, modern shadow */
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+/* The Top Accent Line on the Box */
+.contact-aesthetic-card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 5px;
+    background: var(--accent, #d97706); /* Uses your amber/marigold color */
+}
+
+/* Grid Layout for PC */
+.contact-details-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-5px); /* Interaction effect */
+}
+
+/* Circular Icon Styling */
+.icon-box {
+    width: 60px;
+    height: 60px;
+    background: rgba(217, 119, 6, 0.1); /* Light amber tint */
+    color: var(--accent, #d97706);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* Content Text Styling */
+.contact-text span {
+    display: block;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    color: #64748b; /* Professional Gray */
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.contact-text strong {
+    font-size: 1rem;
+    color: #1e293b; /* Dark Navy/Slate */
+    line-height: 1.5;
+    display: block;
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 850px) {
+    .contact-details-grid {
+        grid-template-columns: 1fr; 
+        gap: 40px;
+    }
+    
+    .contact-aesthetic-card {
+        padding: 40px 20px;
+        margin: 20px 10px;
+    }
+}
+
+
+
+
+
+
+:root {
+    --primary: #101827;
+    --accent: #d97706;
+    --bg-light: #f8fafc;
+    --font-serif: 'Georgia', serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+
+body { 
+    font-family: var(--font-serif); 
+    background: var(--bg-light); 
+    color: var(--primary); 
+    line-height: 1.6; 
+    overflow-x: hidden;
+}
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+/* --- NAVIGATION --- */
+.navbar { 
+    height: 80px; 
+    background: white; 
+    position: sticky; 
+    top: 0; 
+    z-index: 2000; 
+    border-bottom: 4px solid var(--accent); 
+    display: flex; 
+    align-items: center; 
+}
+
+.navbar .container { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%; 
+}
+
+.nav-links { display: flex; list-style: none; align-items: center; }
+.nav-links li { margin-left: 25px; }
+.nav-links a { 
+    text-decoration: none; 
+    color: var(--primary); 
+    font-weight: bold; 
+    font-size: 0.85rem; 
+    text-transform: uppercase; 
+    transition: 0.3s;
+}
+
+/* The Professional Skill Centre Button */
+.nav-btn-highlight {
+    background: var(--accent);
+    color: white !important;
+    padding: 10px 22px !important;
+    border-radius: 50px;
+    box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3);
+}
+
+.nav-btn-highlight:hover {
+    background: var(--primary) !important;
+    transform: translateY(-2px);
+}
+
+/* Hamburger Menu Icon */
+.menu-toggle {
+    display: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+    color: var(--primary);
+    z-index: 3000;
+}
+
+/* --- MOBILE DRAWER (RESPONSIVE) --- */
+@media (max-width: 850px) {
+    .menu-toggle { display: block; }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Hidden by default */
+        width: 80%;
+        height: 100vh;
+        background: white;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        box-shadow: -10px 0 30px rgba(0,0,0,0.15);
+        z-index: 2500;
+        border-left: 8px solid var(--accent); 
+    }
+
+    .nav-links.active {
+        right: 0; /* Slides into view */
+    }
+
+    .nav-links li { margin-left: 0; }
+    .nav-links a { font-size: 1.2rem; }
+    
+    .nav-btn-highlight { width: 200px; text-align: center; }
+}
+
